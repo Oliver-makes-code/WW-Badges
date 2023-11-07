@@ -4,6 +4,6 @@ try {
   await Deno.mkdir("out")
 } catch (e) {}
 
-for (const user in users) {
+for (const user of users) {
   Deno.writeTextFile("out/"+user.uuid+".json", JSON.stringify(user))
 }
